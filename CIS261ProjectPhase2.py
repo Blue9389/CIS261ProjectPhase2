@@ -5,12 +5,12 @@ def GetEmpName():
     empname = input("Enter employee name (END to terminate): ")
     return empname
 def GetDatesWorked():
-    #write the code to input fromdate and todate and return the values from the function.  
+    #write the code to input fromdate and todate and return the values from the function.
+    fromdate = input("Enter the datepay period begin (mm/dd/yy):")
+    todate = input("Enter the date the pay period ended (mm/dd/yy):")
     #Prompt the user for the dates in the following format: mm/dd/yyyy
     #no validations are needed for this input, we will assume the dates are entered correctly
-    fromdate = str(input("Enter the datepay period begin (mm/dd/yy): "))
-    todate = str(input("Enter the date the pay period ended (mm/dd/yy): "))
-
+    
     return fromdate, todate
 
 def GetHoursWorked():
@@ -79,6 +79,7 @@ def PrintTotals(EmpTotals):
     print(f'Total Hours Worked: {EmpTotals["TotalHrs"]}')
     print(f'Total Gross Pay: {EmpTotals["TotGrossPay"]}')
     print(f'Total Taxes: {EmpTotals["TotalTax"]}')
+    
     print(f'Total Net Pay: {EmpTotals["TotalNetPay"]}')
 if __name__ == "__main__":
     # COMMENT OUT THE FOLLOWING CODE
@@ -105,11 +106,10 @@ if __name__ == "__main__":
 
         #write code to insert fromdate, todate, empname, hours, hourlyrate, and taxrate into list EmpDetail
         EmpDetail = []
-        EmpDetail.expand = [{'fromdate': fromdate, 'todate': todate, 'empname': empname, 
-                             'hours': hours, 'hourlyrate': hourlyrate, 'taxrate': taxrate}]
+        EmpDetail = ['fromdate', 'todate', 'empname', 'hours', 'hourlyrate', 'taxrate']
         
         #the following code appends the list EmpDetail to the list EmpDetailList
-        EmpDetailList.append[EmpDetail]
+        [EmpDetail]
 
         # COMMENT OUT THE FOLLOWING CODE
         #TotEmployees += 1
